@@ -1,0 +1,106 @@
+header
+	background: $white
+	.header-top
+		background: $blue
+		color: $white
+	.header-wrap
+		+flexbox
+		align-items: center
+		align-content: center
+	.col-right
+		flex: auto
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: flex-end
+	.top-link, .hotline, .help, .language
+		+flexbox
+		align-items: center
+		align-content: center
+		height: 35px
+		a
+			+flexbox
+			align-items: center
+			align-content: center
+			+fs(13rem)
+			font-weight: 300
+			text-transform: uppercase
+			height: 20px
+			.material-icons, img
+				+fs(16rem)
+				margin-right: 5px
+				color: $lblue
+				opacity: 0.8
+	.hotline, .language
+		margin-left: 15px
+		a
+			border-left: 1px solid color-rgba($white,0.2)
+			padding-left: 15px
+	.header-main
+	.sitelogo
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		height: 85px
+	.search
+		margin-left: 30px
+		.searchbox
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			width: 510px
+			+bor-rad(50px)
+			overflow: hidden
+			border: 2px solid darken($white,5%)
+			input
+				width: calc(100% - 36px)
+				border: none
+				background: none
+				+fs(13rem)
+				padding: 0px 20px
+				&::-webkit-input-placeholder
+					opacity: 0.5
+					font-style: italic
+			.searchbutton
+				width: 36px
+				height: 36px
+				+bor-rad(50%)
+				background: $lblue
+				color: $white
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+	.login
+		a
+			+flexbox
+			align-items: center
+			align-content: center
+			+fs(13rem)
+			.material-icons
+				color: $blue
+				+fs(36rem)
+			.text
+				line-height: 1.4
+				strong
+					display: block
+					font-weight: 600
+	.cart
+		margin-left: 30px
+		.cart-toggle
+			+bor-rad(50px)
+			border: 2px solid $lblue
+			padding: 0px 20px
+			+flexbox
+			line-height: 36px
+			align-items: center
+			align-content: center
+			+fs(15rem)
+			.material-icons
+				color: $lblue
+			.cart-amount
+				color: $blue
+				font-weight: 700
+				margin-left: 5px
