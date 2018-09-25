@@ -5,7 +5,9 @@ body
 	font-size: 14px
 	line-height: 1.5
 	color: $main
-	// background: darken($white,3%)
+	background: darken($white,5%)
+	+media-breakpoint-down(sm)
+		// background: darken($white,3%)
 	*
 		line-height: inherit
 html
@@ -16,7 +18,6 @@ html
 	width: 100%
 	overflow: hidden
 	margin: 0 auto
-	// background: darken($white,3%)
 
 main
 	&.small

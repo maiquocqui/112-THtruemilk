@@ -1,4 +1,14 @@
+.banner-wrap
+	padding-top: 30px
+	margin-bottom: 30px
+	+media-breakpoint-down(sm)
+		padding-top: 5px
+		margin-bottom: 15px
 .home-banner
+	+media-breakpoint-down(sm)
+		+bor-rad(5px)
+		overflow: hidden
+		box-shadow: 0px 3px 20px color-rgba($black,0.1)
 	.slick-prev, .slick-next
 		+pos(abs, 50% null null null)
 		+transform(translateY(-50%))
@@ -29,21 +39,33 @@
 			right: 20px
 	.slick-dots
 		text-align: center
-		+pos(abs, null 0 10px 0)
-		opacity: 0
+		+pos(abs, null 0 15px 0)
 		li
 			display: inline-block
-			width: 6px
-			height: 6px
+			width: 10px
+			height: 10px
 			+bor-rad(50px)
-			background: $white
-			opacity: 0.5
+			background: none
+			border: 1px solid $white
+			+pos(rel,null)
+			cursor: pointer
+			&:before
+				content: ''
+				display: block
+				width: 6px
+				height: 6px
+				+pos(abs,1px null null 1px)
+				background: $lblue
+				+bor-rad(50px)
+				opacity: 0
 			+ li
 				margin-left: 5px
 			button
 				display: none
 			&.slick-active
-				opacity: 1
+				border-color: $lblue
+				&:before
+					opacity: 1
 	.item
 		.banner-img
 			display: block

@@ -1,0 +1,236 @@
+.homepage
+	.fullpage
+		background: url(../img/homebg.png) center top no-repeat
+		background-size: 100% auto
+
+.home-promotion
+	margin-bottom: 20px
+	+media-breakpoint-down(sm)
+		margin-bottom: 5px
+	.col-12
+		margin-bottom: 30px
+		+media-breakpoint-down(sm)
+			margin-bottom: 10px
+	.promotion-item
+		display: block
+		height: 100%
+		background: $white
+		padding: 20px 30px
+		+media-breakpoint-down(sm)
+			padding: 15px
+			+bor-rad(5px)
+			overflow: hidden
+			box-shadow: 0px 3px 20px color-rgba($black,0.05)
+		.title
+			+fs(22rem)
+			font-weight: 500
+			color: $lblue
+			text-transform: uppercase
+			margin-bottom: 15px
+			+media-breakpoint-down(sm)
+				+fs(16rem)
+		.product
+			+pos(rel,null)
+			.label
+				+pos(abs, 0px 0px null null)
+				z-index: 3
+			.img
+				height: 180px
+				+flexbox
+				align-items: center
+				align-content: center
+				justify-content: center
+				+media-breakpoint-down(sm)
+					height: 100px
+				img
+					max-width: 90%
+					max-height: 90%
+			.name
+				+fs(15rem)
+				min-height: 44px
+				font-weight: 300
+				color: $main
+				+textover(2)
+				margin-bottom: 15px
+				+media-breakpoint-down(sm)
+					+fs(14rem)
+					min-height: unset
+					margin-bottom: 10px
+			.price
+				+fs(18rem)
+				font-weight: 500
+				color: $yellow
+				+media-breakpoint-down(sm)
+					+fs(14rem)
+
+.home-choice
+	background: $white
+	margin-bottom: 50px
+	+media-breakpoint-down(sm)
+		+bor-rad(5px)
+		overflow: hidden
+		box-shadow: 0px 3px 20px color-rgba($black,0.05)
+		margin-bottom: 15px
+	.title
+		background: $blue
+		color: $white
+		+fs(20rem)
+		font-weight: 500
+		text-transform: uppercase
+		padding: 0px 30px
+		+flexbox
+		+media-breakpoint-down(sm)
+			+fs(16rem)
+			padding: 0px 15px
+		span
+			display: block
+			+pos(rel,null)
+			line-height: 60px
+			+media-breakpoint-down(sm)
+				line-height: 40px
+			&:before
+				content: ''
+				+pos(abs, null 0 0 0)
+				height: 3px
+				background: $lblue
+	.product-slick
+		padding: 30px 15px
+		+media-breakpoint-down(sm)
+			padding: 10px
+		.slick-list
+			margin: 0px -10px
+		.slick-slide
+			padding: 0px 10px
+	.btn-wrap
+		padding-bottom: 40px
+		+media-breakpoint-down(sm)
+			padding-bottom: 20px
+	.btn-viewmore
+		display: inline-block
+		+fs(15rem)
+		font-weight: 300
+		text-transform: uppercase
+		padding: 0px 40px
+		line-height: 40px
+		color: $white
+		background: $dblue
+		+media-breakpoint-down(sm)
+			+fs(13rem)
+			+bor-rad(5px)
+			line-height: 30px
+			padding: 0px 30px
+
+.product-item
+	display: block
+	+pos(rel,null)
+	padding: 10px
+	border: 1px solid transparent
+	+transition(all,0.5s)
+	.label
+		+pos(abs, 0px 0px null null)
+		z-index: 3
+	.img
+		height: 200px
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
+		+media-breakpoint-down(sm)
+			height: 100px
+		img
+			max-width: 90%
+			max-height: 90%
+	.name
+		+fs(15rem)
+		min-height: 66px
+		font-weight: 300
+		color: $main
+		margin-bottom: 10px
+		+media-breakpoint-down(sm)
+			+fs(13rem)
+			min-height: 55px
+		a
+			display: block
+			+textover(3)
+	.price
+		+fs(18rem)
+		font-weight: 500
+		color: $yellow
+		+media-breakpoint-down(sm)
+			+fs(14rem)
+	.btn-buy
+		+fs(14)
+		font-weight: 300
+		color: $white
+		text-transform: uppercase
+		text-align: center
+		background: $dblue
+		line-height: 40px
+		+transition(all,0.5s)
+		opacity: 0
+		+pos(abs, null 0 0 0)
+		+media-breakpoint-down(sm)
+			+pos(abs, null 5px 5px unset)
+			opacity: 1
+			+bor-rad(50px)
+			width: 26px
+			height: 26px
+			line-height: 1
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			+fs(0)
+			&:before
+				content: '\f07a'
+				+fs(14rem)
+	&:hover
+		+media-breakpoint-up(lg)
+			border-color: $dblue
+			.btn-buy
+				opacity: 1
+
+.home-product
+	+flexbox
+	background: $white
+	margin-bottom: 50px
+	+media-breakpoint-down(sm)
+		margin-bottom: 15px
+		+bor-rad(5px)
+		box-shadow: 0px 3px 20px color-rgba($black,0.05)
+		overflow: hidden
+		flex-wrap: wrap
+	.product-banner
+		width: 360px
+		+media-breakpoint-down(sm)
+			width: 100%
+		.banner-img
+			display: block
+			+pos(rel,null)
+			img
+				+media-breakpoint-down(sm)
+					display: none
+			.caption
+				+pos(abs, 30px null null 30px)
+				+fs(22rem)
+				font-weight: 500
+				text-transform: uppercase
+				color: $blue
+				+media-breakpoint-down(sm)
+					+pos(static,null)
+					+fs(16rem)
+					background: $lblue
+					padding: 0px 15px
+					line-height: 40px
+				&:after
+					content: '\f105'
+					margin-left: 5px
+	.product-wrap
+		width: calc(100% - 360px)
+		+media-breakpoint-down(sm)
+			width: 100%
+	.product-slick2
+		padding: 15px 30px
+		+media-breakpoint-down(sm)
+			padding: 10px
+		.slick-list

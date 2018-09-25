@@ -1,8 +1,25 @@
+body
+	padding-top: 170px
+	+media-breakpoint-down(sm)
+		padding-top: 0
+		.fullpage
+			padding-top: 50px
 header
 	background: $white
+	+pos(fix, 0 0 null 0)
+	z-index: 1000
+	box-shadow: 0px 0px 50px color-rgba($black,0.05)
+	+media-breakpoint-down(sm)
+		background: linear-gradient(color-rgba($white,1),color-rgba($white,0))
+		box-shadow: none
+	&.minimal
+		+media-breakpoint-down(sm)
+			background: $white
 	.header-top
 		background: $blue
 		color: $white
+		+media-breakpoint-down(sm)
+			display: none
 	.header-wrap
 		+flexbox
 		align-items: center
@@ -37,14 +54,36 @@ header
 			border-left: 1px solid color-rgba($white,0.2)
 			padding-left: 15px
 	.header-main
+	.btn-showmenu
+		display: none
+		+media-breakpoint-down(sm)
+			+flexbox
+			margin-right: 10px
+			color: $white
+			width: 30px
+			height: 30px
+			+bor-rad(3px)
+			background: $blue
+			align-items: center
+			align-content: center
+			justify-content: center
+			.material-icons
+				+fs(18rem)
 	.sitelogo
 		+flexbox
 		align-items: center
 		align-content: center
 		justify-content: center
 		height: 85px
+		+media-breakpoint-down(sm)
+			height: 50px
+			+transform(translateY(-3px))
+			img
+				height: 20px
 	.search
 		margin-left: 30px
+		+media-breakpoint-down(sm)
+			display: none
 		.searchbox
 			+flexbox
 			align-items: center
@@ -54,6 +93,7 @@ header
 			+bor-rad(50px)
 			overflow: hidden
 			border: 2px solid darken($white,5%)
+			padding: 2px
 			input
 				width: calc(100% - 36px)
 				border: none
@@ -64,8 +104,8 @@ header
 					opacity: 0.5
 					font-style: italic
 			.searchbutton
-				width: 36px
-				height: 36px
+				width: 32px
+				height: 32px
 				+bor-rad(50%)
 				background: $lblue
 				color: $white
@@ -82,13 +122,19 @@ header
 			.material-icons
 				color: $blue
 				+fs(36rem)
+				+media-breakpoint-down(sm)
+					+fs(22rem)
 			.text
 				line-height: 1.4
+				+media-breakpoint-down(sm)
+					display: none
 				strong
 					display: block
 					font-weight: 600
 	.cart
 		margin-left: 30px
+		+media-breakpoint-down(sm)
+			margin-left: 15px
 		.cart-toggle
 			+bor-rad(50px)
 			border: 2px solid $lblue
@@ -98,9 +144,99 @@ header
 			align-items: center
 			align-content: center
 			+fs(15rem)
+			+media-breakpoint-down(sm)
+				+fs(0)
+				margin: 0
+				padding: 0
+				border: none
+				line-height: 1
 			.material-icons
 				color: $lblue
+				+media-breakpoint-down(sm)
+					+fs(18rem)
+					color: $blue
 			.cart-amount
 				color: $blue
 				font-weight: 700
 				margin-left: 5px
+				+media-breakpoint-down(sm)
+					display: none
+	.search-toggle
+		display: none
+		+media-breakpoint-down(sm)
+			width: 26px
+			height: 26px
+			+bor-rad(50px)
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			color: $white
+			background: $lblue
+			margin-left: 15px
+			.material-icons
+				+fs(18rem)
+	.header-menu
+		border-top: 1px solid darken($white,5%)
+		+media-breakpoint-down(sm)
+			display: none
+	.menu-wrap
+		+flexbox
+		flex-wrap: wrap
+		align-items: center
+		align-content: center
+		.menu-title
+			background: $lblue
+			color: $white
+			height: 50px
+			padding: 0px 20px
+			+flexbox
+			align-items: center
+			align-content: center
+			cursor: pointer
+			.material-icons
+				margin-right: 15px
+			.text
+				+fs(14rem)
+				font-weight: 500
+				text-transform: uppercase
+		.menu1
+			+pos(rel,null)
+			ul.menu-link
+				+pos(abs, 100% 0 null 0)
+				background: $white
+				visibility: hidden
+				+opacity(0)
+				+transition(all,0.5s)
+				li
+					width: 100%
+					a
+						border-bottom: 1px solid darken($white,5%)
+			&:hover
+				ul.menu-link
+					visibility: visible
+					+opacity(1)
+		ul.menu-link
+			+flexbox
+			align-items: center
+			align-content: center
+			flex-wrap: wrap
+			li
+				padding: 0px 20px
+				a
+					+flexbox
+					align-items: center
+					align-content: center
+					+fs(14rem)
+					font-weight: 300
+					.icon
+						width: 32px
+						height: 32px
+						+flexbox
+						align-items: center
+						align-content: center
+						justify-content: center
+						margin-right: 15px
+					.text
+						line-height: 20px
+						padding: 15px 0
