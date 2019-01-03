@@ -1,9 +1,10 @@
-@import url('https://fonts.googleapis.com/css?family=Montserrat:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i&subset=cyrillic,cyrillic-ext,latin-ext,vietnamese')
+@import url('https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i&subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese')
 
 body
-	font-family: 'Montserrat', sans-serif
+	font-family: 'Roboto', sans-serif
 	font-size: 14px
 	line-height: 1.5
+	// color: darken($white,60%)
 	color: $main
 	background: darken($white,5%)
 	+media-breakpoint-down(sm)
@@ -30,7 +31,7 @@ main
 .container
 	+pos(static,unset)
 	+media-breakpoint-up(xl)
-		max-width: 1170px
+		max-width: 1280px
 		width: 100%
 	+media-breakpoint-down(lg)
 		max-width: 100%
@@ -51,6 +52,7 @@ main
 	// font-family: 'Montserrat', sans-serif
 	+fs(15rem)
 	line-height: 1.5
+	color: darken($white,60%)
 	.row
 		margin: 0px -10px
 		.col-12
@@ -84,6 +86,8 @@ main
 				background: darken($white,60%)
 	.img-100
 		width: 100%
+	a
+		color: $lblue
 	ul, ol, p, h1, h2, h3, h4, h5, h6, img, figure
 		margin-bottom: 15px
 		line-height: inherit
@@ -257,11 +261,15 @@ main
 
 .row
 	// margin: 0px -10px
-	&.row-s
+	&.row-xs
 		margin: 0px -5px
 		> [class*="col-"]
 			padding: 0px 5px
-	&.row-m
+	&.row-sm
+		margin: 0px -8px
+		> [class*="col-"]
+			padding: 0px 8px
+	&.row-md
 		margin: 0px -10px
 		> [class*="col-"]
 			padding: 0px 10px

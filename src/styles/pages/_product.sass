@@ -1,0 +1,65 @@
+.product-page-wrap
+	background: $white
+	margin: 20px 0
+	+flexbox
+	.product-filter
+	.product-page
+		width: calc(100% - 240px)
+		+media-breakpoint-down(md)
+			width: 100%
+	.btn-showfilter
+		display: none
+		+media-breakpoint-down(md)
+			display: inline-block
+			+bor-rad(50px)
+			padding: 5px 15px
+			+fs(14rem)
+			color: $lblue
+			border: 1px solid $lblue
+			.mi
+				+fs(18rem)
+				vertical-align: middle
+				margin-right: 10px
+		+media-breakpoint-down(sm)
+			margin: 10px 15px
+			display: block
+			+pos(fix, null 0 0 0)
+			z-index: 500
+			text-align: center
+			background: $white
+			&:hover
+				background: $lblue
+				color: $white
+
+.product-page
+	background: $white
+	padding: 35px
+	+pos(rel,null)
+	+media-breakpoint-down(sm)
+		padding: 15px
+
+.product-sort
+	+flexbox
+	align-items: center
+	align-content: center
+	+pos(abs, 35px 35px null null)
+	+media-breakpoint-down(sm)
+		+pos(static,null)
+		margin-top: -10px
+		margin-bottom: 20px
+	select
+		+bor-rad(50px)
+		padding: 5px 15px
+	.change-view
+		+flexbox
+		align-items: center
+		align-content: center
+		margin-left: 20px
+		a
+			display: block
+			opacity: 0.2
+			.mi
+				display: block
+			&.active
+				opacity: 1
+				color: $lblue

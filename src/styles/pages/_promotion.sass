@@ -1,0 +1,126 @@
+.promotion-page
+	margin: 20px 0
+	background: $white
+	padding: 35px
+	+media-breakpoint-down(sm)
+		padding: 15px
+	.promotion-list
+		.item
+			margin-bottom: 16px
+		.promotion-item
+			display: block
+			text-align: center
+	.pro-time
+		opacity: 0.6
+		margin-top: -10px
+		margin-bottom: 20px
+.page-banner
+	margin-top: 16px
+	img
+		width: 100%
+	+ .promotion-page
+		margin-top: 16px
+.promotion-title
+	color: $lblue
+	+fs(20rem)
+.btn-join
+	@extend .button-primary
+	line-height: 40px
+	padding: 0px 60px
+	display: inline-block
+	box-shadow: 0px 5px 20px color-rgba($black,0.1)
+	&:hover
+		color: $white
+.promotion-code
+	.code-item
+		+flexbox
+		box-shadow: 0px 5px 20px color-rgba($black,0.1)
+		margin-bottom: 30px
+		.img
+			width: 250px
+			border-corner-shape: scoop
+		.caption
+			flex: 1
+			padding: 20px 30px
+			.code
+				+fs(32rem)
+				font-weight: 700
+				color: $lblue
+			time
+				display: block
+				margin-bottom: 30px
+				.mi
+					+fs(16rem)
+					vertical-align: middle
+					margin-right: 5px
+					opacity: 0.6
+			.status
+				background: $blue
+				color: $white
+				+bor-rad(50px)
+				display: inline-block
+				padding: 2px 15px
+.input-code
+	max-width: 850px
+	margin: 60px auto
+	padding: 30px 15px
+	+pos(rel,null)
+	+media-breakpoint-down(sm)
+		margin: 15px 0
+	&:before
+		content: ''
+		+pos(abs, 0 null 0 0)
+		right: 0
+		background: linear-gradient(to bottom, #76cdf2, $white)
+		box-shadow: 0px 5px 20px color-rgba($black,0.2)
+		z-index: 2
+	&:after
+		content: ''
+		+pos(abs, 0 null 0 0)
+		right: 0
+		background: linear-gradient(to bottom, #76cdf2, $white)
+		box-shadow: 0px 5px 20px color-rgba($black,0.2)
+		+transform(rotateZ(5deg)translate(-40px,-13px))
+		z-index: 1
+		+media-breakpoint-down(md)
+			+transform(rotateZ(5deg)translate(-20px,-13px))
+		+media-breakpoint-down(sm)
+			display: none
+	.code
+		+fs(28rem)
+		font-weight: 500
+		color: $blue
+		text-align: center
+		+pos(rel,null)
+		z-index: 3
+	.status
+		margin-bottom: 15px
+		+pos(rel,null)
+		z-index: 3
+		ul
+			+flexbox
+			flex-wrap: wrap
+			justify-content: center
+			li
+				padding: 0px 10px
+				color: darken($white,60%)
+				font-weight: 500
+				span
+					font-weight: 500
+					padding: 0px 10px
+	.form-wrap
+		max-width: 400px
+		margin: 0 auto
+		+pos(rel,null)
+		z-index: 3
+		.form-group.code
+			+pos(rel,null)
+			input
+				padding: 7px 15px
+				margin: 0
+			.btn-copy
+				@extend .button-primary
+				padding: 0px 15px
+				line-height: 30px
+				+fs(13rem)
+				+pos(abs, 8px 4px null null)

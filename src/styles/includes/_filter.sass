@@ -1,133 +1,95 @@
 .product-filter
-	+pos(fix, 0 0 0 null)
-	width: 280px
 	background: $white
-	z-index: 1100
-	padding: 10px 0 50px
-	+transform(translateX(100%))
-	+transition(all,0.5s)
-	&.open
-		+transform(translateX(0))
+	width: 240px
+	border-right: 1px solid darken($white,10%)
+	+media-breakpoint-down(md)
+		border-right: none
+		+pos(fix, 0px null 0 0)
+		z-index: 1100
+		+transform(translateX(-130%))
+		+transition(all,0.5s)
+		&.open
+			+transform(translateX(0))
+	.filter-toggle
+		display: none
+		+media-breakpoint-down(md)
+			+pos(abs, 100px null null 100%)
+			width: 36px
+			height: 36px
+			+flexbox
+			align-items: center
+			align-content: center
+			justify-content: center
+			background: $white
 	.filter-wrap
-		height: calc(100vh - 40px)
-		padding: 0px 10px
+		padding: 20px 30px
+		padding: 70px 30px
+		max-height: 100%
 		overflow: auto
 	.filter-group
-		padding-bottom: 10px
-		margin-bottom: 10px
-		border-bottom: 1px solid darken($white,10%)
-	.filter-name
-		+fs(14rem)
-		font-weight: 500
-		margin-bottom: 10px
-	.filter-category
-		> ul
-			> li
-				+pos(rel,null)
-				> a
-					display: block
-					+fs(14rem)
-					padding: 0 0 10px
-					font-weight: 500
-					text-transform: uppercase
-				.btn-showsub
-					+pos(abs, 0px 0 null null)
-					&:before
-						content: '\f107'
-				.sub
-					display: none
-					ul
-						+flexbox
-						flex-wrap: wrap
-						li
-							margin-right: 10px
-							margin-bottom: 10px
-							a
-								display: block
-								+fs(13rem)
-								padding: 3px 15px
-								border: 1px solid darken($white,10%)
-								background: darken($white,3%)
-							&.active
-								a
-									color: $red
-									background: color-rgba($red,0.1)
-									border-color: color-rgba($red,0.5)
-									+pos(rel,null)
-									&:after
-										content: ''
-										display: block
-										+pos(abs, null 0 0 null)
-										z-index: 1
-										width: 0
-										height: 0
-										border: 3px solid transparent
-										border-right-color: color-rgba($red,0.5)
-										border-bottom-color: color-rgba($red,0.5)
-				&.active
-					> a
-						color: $red
-					.sub
-						display: block
-	.filter-ajax
-		ul
-			+flexbox
-			flex-wrap: wrap
+		margin-bottom: 30px
+		.filter-title
+			+fs(16rem)
+			font-weight: 500
+			margin-bottom: 10px
+		ul.filter-list
 			li
-				margin-right: 10px
 				margin-bottom: 10px
 				a
 					display: block
-					+fs(13rem)
-					padding: 3px 15px
-					border: 1px solid darken($white,10%)
-					background: darken($white,3%)
+					padding-left: 25px
+					+fs(14rem)
+					color: $main
+					+pos(rel,null)
+					&:before
+						content: '\f00c'
+						+pos(abs, 2px null null 0)
+						width: 16px
+						height: 16px
+						+flexbox
+						align-items: center
+						justify-content: center
+						+fs(0rem)
+						border: 1px solid darken($white,10%)
+						+transition(all,0.5s)
 					&.active
-						color: $red
-						background: color-rgba($red,0.1)
-						border-color: color-rgba($red,0.5)
-						+pos(rel,null)
-						&:after
-							content: ''
-							display: block
-							+pos(abs, null 0 0 null)
-							z-index: 1
-							width: 0
-							height: 0
-							border: 3px solid transparent
-							border-right-color: color-rgba($red,0.5)
-							border-bottom-color: color-rgba($red,0.5)
-				&.active
-					a
-						color: $red
-						background: color-rgba($red,0.1)
-						border-color: color-rgba($red,0.5)
-						+pos(rel,null)
-						&:after
-							content: ''
-							display: block
-							+pos(abs, null 0 0 null)
-							z-index: 1
-							width: 0
-							height: 0
-							border: 3px solid transparent
-							border-right-color: color-rgba($red,0.5)
-							border-bottom-color: color-rgba($red,0.5)
-	.filter-button
-		+flexbox
-		+pos(abs, null 0 0 0)
-		z-index: 3
-		background: $white
-		.btn-reset, .btn-close
-			display: block
-			width: 50%
-			+fs(14rem)
-			font-weight: 500
-			text-transform: uppercase
-			line-height: 40px
-			text-align: center
-			color: $white
-		.btn-reset
-			background: $bluegradient
-		.btn-close
-			background: $orangegradient
+						&:before
+							color: $lblue
+							+fs(12rem)
+							border-color: $lblue
+		.btn-showmore
+			color: $lblue
+			&:after
+				content: '\f107'
+				margin-left: 10px
+				color: $main
+#range-slider
+	margin: 20px 0
+.noUi-target
+	background: darken($white,15%)
+	border: none
+	+bor-rad(0)
+	height: 2px
+	box-shadow: none
+.noUi-base
+	height: 2px
+.noUi-connects
+	+bor-rad(0)
+	height: 2px
+.noUi-connect, .noUi-origin
+	height: 2px
+.noUi-connect
+	background: $dblue
+.noUi-horizontal 
+	// right: -5px
+	.noUi-handle
+		display: block
+		border: 1px solid $dblue
+		width: 10px
+		height: 10px
+		+bor-rad(100px)
+		top: -4px
+		&:before, &:after
+			display: none
+html:not([dir="rtl"]) .noUi-horizontal .noUi-handle
+	right: -5px

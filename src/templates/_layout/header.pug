@@ -2,28 +2,21 @@ header
 	section.header-top
 		.container
 			.header-wrap
-				.top-link
-					a(href="#!")
-						img(src="img/thicon.png", alt="")
-						|TH MILK
-				.hotline
-					a(href="#!") 
-						i.material-icons phone
-						|1800 545440
 				.col-right
+					.hotline
+						a(href="#!") 
+							i.material-icons phone
+							|1800 545440
 					.help
 						a(href="#!")
 							i.material-icons help
 							|Hỗ trợ
-					.language
-						a(href="#!")
-							i.material-icons language
-							|VN
 	section.header-main
 		.container
 			.header-wrap
 				.btn-showmenu 
 					i.material-icons menu
+				.overlay
 				.sitelogo
 					a(href="#!")
 						img(src="img/logo.png", alt="")
@@ -31,7 +24,7 @@ header
 					.searchbox
 						input(type="text" placeholder="Tìm kiếm sản phẩm...")
 						.searchbutton 
-							i.material-icons search
+							i.mi search
 				.col-right
 					.login
 						a(href="#!")
@@ -54,46 +47,65 @@ header
 						i.material-icons menu
 						.text Danh mục sản phẩm
 					ul.menu-link
-						li
+						li.has-mega
 							a(href="#!")
 								.icon
 									img(src="img/ic1.png", alt="")
-								.text TH true NUT
+								.text Sản Phẩm
+							.mega
+								.mega-col
+									ul.mega-link
+										li
+											a(href="#!") BƠ & PHOMAT
+											.mega-sub
+												ul
+													li
+														a(href="#!") Sữa tươi A2
+													li
+														a(href="#!") Sữa tươi thanh trùng
+													li
+														a(href="#!") Sữa tươi tiệt trùng
+													li
+														a(href="#!") Sữa tươi công thức
+										li
+											a(href="#!") KEM
+										li
+											a(href="#!") SỮA CHUA TỰ NHIÊN
+										li
+											a(href="#!") SỮA TƯƠI
+										li
+											a(href="#!") THỨC UỐNG TỐT CHO SỨC KHỎE
+										li
+											a(href="#!") SỮA HẠT
+								.mega-col
+									.menu-banner
+										a.d-block(href="#!")
+											img.w-100(src="img/bn1.jpg", alt="")
 						li
 							a(href="#!")
 								.icon
 									img(src="img/ic2.png", alt="")
-								.text TH true MALT
+								.text Chương Trình Khuyến Mãi
 						li
 							a(href="#!")
 								.icon
 									img(src="img/ic3.png", alt="")
-								.text TH true HERBAL
+								.text Sản Phẩm Đã Mua
 						li
 							a(href="#!")
 								.icon
 									img(src="img/ic4.png", alt="")
-								.text TH true ICE CREAM
+								.text Mã Khuyến Mãi
 						li
 							a(href="#!")
 								.icon
 									img(src="img/ic5.png", alt="")
-								.text TH true BUTTER
+								.text Khảo Sát
 						li
 							a(href="#!")
 								.icon
 									img(src="img/ic6.png", alt="")
-								.text TH true CHEESE
-						li
-							a(href="#!")
-								.icon
-									img(src="img/ic7.png", alt="")
-								.text TH true MILK
-						li
-							a(href="#!")
-								.icon
-									img(src="img/ic8.png", alt="")
-								.text TH true YOGURT
+								.text Hóa Đơn Điện Tử
 				.menu2
 					ul.menu-link
 						li

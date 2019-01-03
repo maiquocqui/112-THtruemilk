@@ -1,0 +1,46 @@
+.login-page
+	max-width: 570px
+	margin: 20px auto
+	background: $white
+	padding: 60px
+	border-top: 3px solid $lblue
+	box-shadow: 0px 5px 20px color-rgba($black,0.1)
+	+media-breakpoint-down(sm)
+		padding: 15px
+		margin: 15px 0
+	.module-title
+		+fs(20rem)
+		text-transform: uppercase
+		font-weight: 500
+		margin-bottom: 10px
+		text-align: center
+	.form-wrap
+		label
+			text-transform: uppercase
+			margin-left: 20px
+	.checkbox, .radio
+		margin-bottom: 20px
+		label
+			text-transform: none
+			font-weight: normal
+	input[type="submit"]
+		@extend .button-primary
+		border: none
+		padding: 5px 0
+		text-align: center
+		+fs(16rem)
+		margin-bottom: 10px
+		+media-breakpoint-down(sm)
+			padding: 0
+	.btn-register
+		@extend .button-secondary
+		padding: 5px 0
+		text-align: center
+		+fs(15rem)
+		+media-breakpoint-down(sm)
+			padding: 0
+	.forget
+		text-align: center
+		text-decoration: underline
+		color: darken($white,40%)
+

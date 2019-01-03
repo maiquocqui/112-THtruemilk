@@ -18,11 +18,9 @@
         <section class="header-top">
           <div class="container">
             <div class="header-wrap">
-              <div class="top-link"><a href="#!"><img src="img/thicon.png" alt="">TH MILK</a></div>
-              <div class="hotline"><a href="#!"> <i class="material-icons">phone</i>1800 545440</a></div>
               <div class="col-right">
+                <div class="hotline"><a href="#!"> <i class="material-icons">phone</i>1800 545440</a></div>
                 <div class="help"><a href="#!"><i class="material-icons">help</i>Hỗ trợ</a></div>
-                <div class="language"><a href="#!"><i class="material-icons">language</i>VN</a></div>
               </div>
             </div>
           </div>
@@ -31,11 +29,12 @@
           <div class="container">
             <div class="header-wrap">
               <div class="btn-showmenu"> <i class="material-icons">menu</i></div>
+              <div class="overlay"></div>
               <div class="sitelogo"><a href="#!"><img src="img/logo.png" alt=""></a></div>
               <div class="search">
                 <div class="searchbox">
                   <input type="text" placeholder="Tìm kiếm sản phẩm...">
-                  <div class="searchbutton"> <i class="material-icons">search</i></div>
+                  <div class="searchbutton"> <i class="mi">search</i></div>
                 </div>
               </div>
               <div class="col-right">
@@ -58,30 +57,49 @@
                   <div class="text">Danh mục sản phẩm</div>
                 </div>
                 <ul class="menu-link">
-                  <li><a href="#!">
+                  <li class="has-mega"><a href="#!">
                       <div class="icon"><img src="img/ic1.png" alt=""></div>
-                      <div class="text">TH true NUT</div></a></li>
+                      <div class="text">Sản Phẩm</div></a>
+                    <div class="mega">
+                      <div class="mega-col">
+                        <ul class="mega-link">
+                          <li><a href="#!">BƠ & PHOMAT</a>
+                            <div class="mega-sub">
+                              <ul>
+                                <li><a href="#!">Sữa tươi A2</a></li>
+                                <li><a href="#!">Sữa tươi thanh trùng</a></li>
+                                <li><a href="#!">Sữa tươi tiệt trùng</a></li>
+                                <li><a href="#!">Sữa tươi công thức</a></li>
+                              </ul>
+                            </div>
+                          </li>
+                          <li><a href="#!">KEM</a></li>
+                          <li><a href="#!">SỮA CHUA TỰ NHIÊN</a></li>
+                          <li><a href="#!">SỮA TƯƠI</a></li>
+                          <li><a href="#!">THỨC UỐNG TỐT CHO SỨC KHỎE</a></li>
+                          <li><a href="#!">SỮA HẠT</a></li>
+                        </ul>
+                      </div>
+                      <div class="mega-col">
+                        <div class="menu-banner"><a class="d-block" href="#!"><img class="w-100" src="img/bn1.jpg" alt=""></a></div>
+                      </div>
+                    </div>
+                  </li>
                   <li><a href="#!">
                       <div class="icon"><img src="img/ic2.png" alt=""></div>
-                      <div class="text">TH true MALT</div></a></li>
+                      <div class="text">Chương Trình Khuyến Mãi</div></a></li>
                   <li><a href="#!">
                       <div class="icon"><img src="img/ic3.png" alt=""></div>
-                      <div class="text">TH true HERBAL</div></a></li>
+                      <div class="text">Sản Phẩm Đã Mua</div></a></li>
                   <li><a href="#!">
                       <div class="icon"><img src="img/ic4.png" alt=""></div>
-                      <div class="text">TH true ICE CREAM</div></a></li>
+                      <div class="text">Mã Khuyến Mãi</div></a></li>
                   <li><a href="#!">
                       <div class="icon"><img src="img/ic5.png" alt=""></div>
-                      <div class="text">TH true BUTTER</div></a></li>
+                      <div class="text">Khảo Sát</div></a></li>
                   <li><a href="#!">
                       <div class="icon"><img src="img/ic6.png" alt=""></div>
-                      <div class="text">TH true CHEESE</div></a></li>
-                  <li><a href="#!">
-                      <div class="icon"><img src="img/ic7.png" alt=""></div>
-                      <div class="text">TH true MILK</div></a></li>
-                  <li><a href="#!">
-                      <div class="icon"><img src="img/ic8.png" alt=""></div>
-                      <div class="text">TH true YOGURT</div></a></li>
+                      <div class="text">Hóa Đơn Điện Tử</div></a></li>
                 </ul>
               </div>
               <div class="menu2">
@@ -117,7 +135,7 @@
       <main>
         <div class="container">
           <section class="home-promotion">
-            <div class="row">
+            <div class="row row-sm">
               <div class="col-12 col-md-4">
                 <div class="promotion-item">
                   <div class="title">Khuyến mại nổi bật</div><a class="product" href="#!">
@@ -146,36 +164,61 @@
             </div>
           </section>
           <section class="home-choice">
-            <div class="title"> <span>Sản phẩm dành cho bạn</span></div>
+            <div class="title">Sản phẩm dành cho bạn</div>
             <div class="product-slick">
               <div class="item">
                 <div class="product-item"><a class="img" href="#!"><img src="img/p1.png" alt=""></a>
                   <h2 class="name"> <a href="#!">Sữa hạt và gấc TH true NUT 180 ml</a></h2>
-                  <div class="price">20.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                  <div class="price">20.000 đ</div>
+                  <div class="btns">
+                    <select class="select-amount">
+                      <option>1</option>
+                    </select><a class="btn-buy" href="#!">Mua ngay</a>
+                  </div>
                 </div>
               </div>
               <div class="item">
                 <div class="product-item"><a class="img" href="#!"><img src="img/p2.png" alt=""></a>
                   <h2 class="name"><a href="#!">Thức uống lên men từ mầm lúa mạch TH true MALT lon 500 ml</a></h2>
-                  <div class="price">12.500 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                  <div class="price">12.500 đ</div>
+                  <div class="btns">
+                    <select class="select-amount">
+                      <option>1</option>
+                    </select><a class="btn-buy" href="#!">Mua ngay</a>
+                  </div>
                 </div>
               </div>
               <div class="item">
                 <div class="product-item"><a class="img" href="#!"><img src="img/p3.png" alt=""></a>
                   <h2 class="name"><a href="#!">Kem hộp TH true ICE CREAM sô cô la nguyên chất</a></h2>
-                  <div class="price">60.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                  <div class="price">60.000 đ</div>
+                  <div class="btns">
+                    <select class="select-amount">
+                      <option>1</option>
+                    </select><a class="btn-buy" href="#!">Mua ngay</a>
+                  </div>
                 </div>
               </div>
               <div class="item">
                 <div class="product-item"><a class="img" href="#!"><img src="img/p4.png" alt=""></a>
                   <h2 class="name"><a href="#!">Sữa tươi hữu cơ TH true MILK Organic 1 lít</a></h2>
-                  <div class="price">55.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                  <div class="price">55.000 đ</div>
+                  <div class="btns">
+                    <select class="select-amount">
+                      <option>1</option>
+                    </select><a class="btn-buy" href="#!">Mua ngay</a>
+                  </div>
                 </div>
               </div>
               <div class="item">
                 <div class="product-item"><a class="img" href="#!"><img src="img/p5.png" alt=""></a>
                   <h2 class="name"><a href="#!">Sữa tươi TOPKID từ sữa Organic vị kem Vanilla tự nhiên 180 ml</a></h2>
-                  <div class="price">50.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                  <div class="price">50.000 đ</div>
+                  <div class="btns">
+                    <select class="select-amount">
+                      <option>1</option>
+                    </select><a class="btn-buy" href="#!">Mua ngay</a>
+                  </div>
                 </div>
               </div>
             </div>
@@ -189,25 +232,45 @@
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd1.jpg" alt=""></a>
                     <h2 class="name"> <a href="#!">Sữa hạt Óc Chó TH true NUT 180 ml</a></h2>
-                    <div class="price">50.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">50.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd2.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Sữa hạt Macca TH true NUT 180 ml</a></h2>
-                    <div class="price">50.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">50.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd3.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Sữa Hạt và Gấc TH true NUT 180 ml</a></h2>
-                    <div class="price">50.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">50.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd4.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Sữa hạt Hạnh Nhân TH true NUT 180 ml</a></h2>
-                    <div class="price">50.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">50.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -221,25 +284,45 @@
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd5.jpg" alt=""></a>
                     <h2 class="name"> <a href="#!">Thức Uống Thảo Dược Gấc Tự Nhiên Actiso đỏ và Mâm xôi</a></h2>
-                    <div class="price">15.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">15.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd6.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Rau má Organic - Chanh và Bạc hà</a></h2>
-                    <div class="price">15.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">15.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd7.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Thức Uống Thảo Dược Gấc Tự Nhiên – Lạc Tiên</a></h2>
-                    <div class="price">15.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">15.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd8.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Thức Uống Lên Men Từ Mầm Lúa Mạch TH true MALT chai</a></h2>
-                    <div class="price">10.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">10.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -253,25 +336,45 @@
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd9.jpg" alt=""></a>
                     <h2 class="name"> <a href="#!">Sữa Tươi Hữu Cơ TH true MILK Organic 500 ml</a></h2>
-                    <div class="price">31.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">31.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd10.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Sữa A2</a></h2>
-                    <div class="price">31.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">31.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd11.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Sữa Thanh Trùng Nguyên Chất 1L</a></h2>
-                    <div class="price">36.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">36.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd12.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Sữa tươi tiệt trùng Sô cô la nguyên chất 180ml</a></h2>
-                    <div class="price">31.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">31.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -285,31 +388,51 @@
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd13.jpg" alt=""></a>
                     <h2 class="name"> <a href="#!">Sữa chua TH True Yogurt có Đường</a></h2>
-                    <div class="price">22.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">22.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd14.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Sữa chua Sầu riêng tự nhiên</a></h2>
-                    <div class="price">28.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">28.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd15.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Sữa chua uống men sống hương Vanilla tự nhiên</a></h2>
-                    <div class="price">28.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">28.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd16.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Sữa chua uống men sống Việt quất tự nhiên</a></h2>
-                    <div class="price">28.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">28.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          <section class="home-product shadow">
+          <section class="home-product">
             <div class="product-banner"><a class="banner-img" href="#!"><img src="img/pb5.jpg" alt="">
                 <div class="caption">Kem</div></a></div>
             <div class="product-wrap">
@@ -317,31 +440,51 @@
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd17.jpg" alt=""></a>
                     <h2 class="name"> <a href="#!">Kem Que TH true ICE CREAM Sô Cô La Nguyên Chất</a></h2>
-                    <div class="price">18.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">18.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd18.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Kem Que TH true ICE CREAM Hương Vanilla Tự Nhiên</a></h2>
-                    <div class="price">18.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">18.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd19.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Kem Ốc Quế TH true ICE CREAM Sô Cô La Nguyên Chất</a></h2>
-                    <div class="price">20.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">20.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd20.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Kem Ốc Quế TH true ICE CREAM Hương Vanilla Tự Nhiên</a></h2>
-                    <div class="price">20.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">20.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </section>
-          <section class="home-product shadow">
+          <section class="home-product">
             <div class="product-banner"><a class="banner-img" href="#!"><img src="img/pb6.jpg" alt="">
                 <div class="caption">Bơ & Phomat</div></a></div>
             <div class="product-wrap">
@@ -349,19 +492,34 @@
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd21.jpg" alt=""></a>
                     <h2 class="name"> <a href="#!">Bơ Lạt Tự Nhiên TH true BUTTER 200 g</a></h2>
-                    <div class="price">42.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">42.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd22.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Bơ Lạt Tự Nhiên TH true BUTTER 10 g</a></h2>
-                    <div class="price">22.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">22.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
                 <div class="item">
                   <div class="product-item"><a class="img" href="#!"><img src="img/pd23.jpg" alt=""></a>
                     <h2 class="name"><a href="#!">Phomai Que TH true CHEESE Mozzarella</a></h2>
-                    <div class="price">40.000 đ</div><a class="btn-buy" href="#!">Thêm vào giỏ hàng</a>
+                    <div class="price">40.000 đ</div>
+                    <div class="btns">
+                      <select class="select-amount">
+                        <option>1</option>
+                      </select><a class="btn-buy" href="#!">Mua ngay</a>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -372,7 +530,7 @@
       <footer>
         <div class="footer-top">
           <div class="container">
-            <div class="row">
+            <div class="row row-sm">
               <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 <section class="footer-col">
                   <div class="sitelogo"><img src="img/logo2.png" alt=""></div>
@@ -395,13 +553,14 @@
               <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 <section class="footer-col">
                   <div class="footer-title">Hỗ trợ khách hàng</div>
-                  <nav class="footer-link"><a href="#!">Các câu hỏi thường gặp</a><a href="#!">Hướng dẫn đặt hàng</a><a href="#!">Phương thức vận chuyển</a><a href="#!">Chính sách đổi trả</a><a href="#!">Chính sách hàng nhập khẩu</a></nav>
+                  <nav class="footer-link"><a href="#!">Bảo mật thông tin</a><a href="#!">Chính sách giao hàng</a><a href="#!">Điều khoảng đổi trả</a></nav>
                 </section>
               </div>
               <div class="col-12 col-sm-6 col-md-6 col-lg-3">
                 <section class="footer-col">
-                  <div class="footer-title">Sản phẩm</div>
-                  <nav class="footer-link"><a href="#!">TH true NUT</a><a href="#!">TH true MALT</a><a href="#!">TH true HERBAL</a><a href="#!">TH true ICE CREAM</a><a href="#!">TH true BUTTER</a><a href="#!">TH true CHEESE</a><a href="#!">TH true MILK</a><a href="#!">TH true YOGURT</a></nav>
+                  <div class="footer-title"> <a href="#!">Mã khuyến mãi</a></div>
+                  <div class="footer-title"> <a href="#!">chương trình khuyến mãi</a></div>
+                  <div class="footer-title"> <a href="#!">KHẢO SÁT</a></div>
                 </section>
               </div>
             </div>

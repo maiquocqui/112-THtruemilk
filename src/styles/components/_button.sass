@@ -1,20 +1,32 @@
 // BUTTON
-.btn-main
-	display: inline-block
-	+fs(14rem)
+.button-primary
+	display: block
+	color: $white
+	background: $lblue
 	line-height: 40px
-	font-weight: 700
-	color: $black
-	padding: 0px 30px
-	text-align: center
-	+bor-rad(5px)
-	background: $bluegradient
-	+transition(all,0.5s)
+	+bor-rad(100px)
+	font-weight: 500
+	text-transform: uppercase
 	&:hover
-		background: $bluegradient
-		box-shadow: 0px 10px 20px -10px color-rgba($blue,1)
-	&.big
-		line-height: 40px
-		padding: 0px 50px
-		+fs(14rem)
-		text-transform: uppercase
+		background: $dblue
+.button-secondary
+	display: block
+	color: $lblue
+	border: 1px solid $lblue
+	line-height: 40px
+	+bor-rad(100px)
+	font-weight: 500
+	text-transform: uppercase
+	&:hover
+		background: $lblue
+		color: $white
+.button-square
+	display: block
+	color: $white
+	background: $lblue
+	font-weight: 500
+	line-height: 40px
+	text-transform: uppercase
+	&:hover
+		color: $white
+		background: $dblue

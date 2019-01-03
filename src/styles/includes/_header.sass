@@ -1,6 +1,6 @@
 body
 	padding-top: 170px
-	+media-breakpoint-down(sm)
+	+media-breakpoint-down(lg)
 		padding-top: 0
 		.fullpage
 			padding-top: 50px
@@ -9,16 +9,16 @@ header
 	+pos(fix, 0 0 null 0)
 	z-index: 1000
 	box-shadow: 0px 0px 50px color-rgba($black,0.05)
-	+media-breakpoint-down(sm)
+	+media-breakpoint-down(lg)
 		background: linear-gradient(color-rgba($white,1),color-rgba($white,0))
 		box-shadow: none
 	&.minimal
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(lg)
 			background: $white
 	.header-top
 		background: $blue
 		color: $white
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(lg)
 			display: none
 	.header-wrap
 		+flexbox
@@ -41,14 +41,14 @@ header
 			align-content: center
 			+fs(13rem)
 			font-weight: 300
-			text-transform: uppercase
+			// text-transform: uppercase
 			height: 20px
 			.material-icons, img
 				+fs(16rem)
 				margin-right: 5px
 				color: $lblue
 				opacity: 0.8
-	.hotline, .language
+	.help
 		margin-left: 15px
 		a
 			border-left: 1px solid color-rgba($white,0.2)
@@ -56,7 +56,7 @@ header
 	.header-main
 	.btn-showmenu
 		display: none
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(lg)
 			+flexbox
 			margin-right: 10px
 			color: $white
@@ -69,20 +69,30 @@ header
 			justify-content: center
 			.material-icons
 				+fs(18rem)
+	.overlay
+		display: none
+		+pos(fix, 0 null 0 0)
+		right: 0
+		z-index: 500
+		background: $black
+		opacity: 0.6
 	.sitelogo
 		+flexbox
 		align-items: center
 		align-content: center
 		justify-content: center
 		height: 85px
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(lg)
 			height: 50px
 			+transform(translateY(-3px))
 			img
 				height: 20px
 	.search
-		margin-left: 30px
-		+media-breakpoint-down(sm)
+		margin-left: 80px
+		+media-breakpoint-down(lg)
+			margin-left: 0
+			+pos(fix, 50px 15px null null)
+			z-index: 50
 			display: none
 		.searchbox
 			+flexbox
@@ -94,12 +104,20 @@ header
 			overflow: hidden
 			border: 2px solid darken($white,5%)
 			padding: 2px
+			+media-breakpoint-down(lg)
+				width: 200px
+				+bor-rad(5px)
+				background: $white
+				border: none
+				box-shadow: 0px 3px 10px color-rgba($black,0.05)
 			input
 				width: calc(100% - 36px)
 				border: none
 				background: none
 				+fs(13rem)
 				padding: 0px 20px
+				+media-breakpoint-down(lg)
+					padding: 0px 10px
 				&::-webkit-input-placeholder
 					opacity: 0.5
 					font-style: italic
@@ -113,6 +131,13 @@ header
 				align-items: center
 				align-content: center
 				justify-content: center
+				+media-breakpoint-down(lg)
+					width: 32px
+					height: 32px
+					background: none
+					color: $lblue
+					.mi
+						+fs(20rem)
 	.login
 		a
 			+flexbox
@@ -122,29 +147,30 @@ header
 			.material-icons
 				color: $blue
 				+fs(36rem)
-				+media-breakpoint-down(sm)
+				+media-breakpoint-down(lg)
 					+fs(22rem)
 			.text
 				line-height: 1.4
-				+media-breakpoint-down(sm)
+				+media-breakpoint-down(lg)
 					display: none
 				strong
 					display: block
 					font-weight: 600
 	.cart
 		margin-left: 30px
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(lg)
 			margin-left: 15px
 		.cart-toggle
 			+bor-rad(50px)
 			border: 2px solid $lblue
-			padding: 0px 20px
+			padding: 0px 25px
 			+flexbox
-			line-height: 36px
+			line-height: 34px
 			align-items: center
 			align-content: center
-			+fs(15rem)
-			+media-breakpoint-down(sm)
+			+fs(14rem)
+			+pos(rel,null)
+			+media-breakpoint-down(lg)
 				+fs(0)
 				margin: 0
 				padding: 0
@@ -152,18 +178,28 @@ header
 				line-height: 1
 			.material-icons
 				color: $lblue
-				+media-breakpoint-down(sm)
+				+fs(18rem)
+				margin-right: 15px
+				+media-breakpoint-down(lg)
 					+fs(18rem)
 					color: $blue
+					margin-right: 0
 			.cart-amount
 				color: $blue
 				font-weight: 700
 				margin-left: 5px
-				+media-breakpoint-down(sm)
-					display: none
+				+media-breakpoint-down(lg)
+					background: $amber
+					color: $white
+					+fs(10rem)
+					line-height: 1
+					padding: 1px
+					+bor-rad(100px)
+					+pos(abs, -5px -10px null null)
+					z-index: 1
 	.search-toggle
 		display: none
-		+media-breakpoint-down(sm)
+		+media-breakpoint-down(lg)
 			width: 26px
 			height: 26px
 			+bor-rad(50px)
@@ -178,13 +214,27 @@ header
 				+fs(18rem)
 	.header-menu
 		border-top: 1px solid darken($white,5%)
-		+media-breakpoint-down(sm)
-			display: none
+		+media-breakpoint-down(lg)
+			// display: none
+			+pos(fix, 0 null 0 0)
+			width: 280px
+			z-index: 1000
+			background: $white
+			+transform(translateX(-100%))
+			+transition(all,0.5s)
+			&.open
+				+transform(translateX(0))
+			.container
+				padding: 0
 	.menu-wrap
 		+flexbox
 		flex-wrap: wrap
 		align-items: center
 		align-content: center
+		+pos(rel,null)
+		+media-breakpoint-down(lg)
+			display: block
+			border-top: 4px solid $lblue
 		.menu-title
 			background: $lblue
 			color: $white
@@ -194,6 +244,8 @@ header
 			align-items: center
 			align-content: center
 			cursor: pointer
+			+media-breakpoint-down(lg)
+				display: none
 			.material-icons
 				margin-right: 15px
 			.text
@@ -201,34 +253,128 @@ header
 				font-weight: 500
 				text-transform: uppercase
 		.menu1
-			+pos(rel,null)
+			width: 290px
+			+media-breakpoint-down(lg)
+				width: auto
+				border-bottom: 1px solid darken($white,5%)
+				margin: 0px 15px
+				padding: 15px 0
 			ul.menu-link
-				+pos(abs, 100% 0 null 0)
+				+pos(abs, 100% null null 0)
 				background: $white
 				visibility: hidden
 				+opacity(0)
 				+transition(all,0.5s)
-				li
-					width: 100%
-					a
-						border-bottom: 1px solid darken($white,5%)
-			&:hover
-				ul.menu-link
+				width: 290px
+				box-shadow: 0px 5px 20px color-rgba($black,0.2)
+				+media-breakpoint-down(lg)
+					width: auto
+					+pos(static,null)
+					box-shadow: none
 					visibility: visible
 					+opacity(1)
+				> li
+					width: 100%
+					+media-breakpoint-down(lg)
+						padding: 0px
+					> a
+						font-weight: normal
+						text-transform: uppercase
+						border-bottom: 1px solid darken($white,5%)
+						+pos(rel,null)
+						+media-breakpoint-down(lg)
+							border-bottom: none
+						&:after
+							content: ''
+							display: block
+							border-top: 10px solid transparent
+							border-bottom: 10px solid transparent
+							border-right: 10px solid $white
+							+pos(abs,15px -20px null null)
+							display: none
+							z-index: 105
+						.text
+							font-weight: normal
+					&.has-mega
+						.mega
+							+pos(abs, 0 null null 100%)
+							background: $white
+							z-index: 100
+							width: calc(1250px - 290px)
+							min-height: 100%
+							padding: 20px
+							box-shadow: 0px 5px 20px color-rgba($black,0.2)
+							display: none
+							.mega-col
+								width: 50%
+								+ .mega-col
+									border-left: 1px solid darken($white,10%)
+								.menu-banner
+									padding-left: 20px
+								ul
+									width: 50%
+									height: 100%
+									+pos(rel,null)
+									// border-right: 1px solid darken($white,10%)
+									li
+										padding: 0px 20px
+										a
+											display: block
+											+fs(14rem)
+											line-height: 1.3
+											font-weight: 400
+											text-transform: uppercase
+											padding: 10px 0
+											padding-left: 20px
+											+pos(rel,null)
+											&:before
+												content: '\f105'
+												font-family: 'fontawesome'
+												+pos(abs, 10px null null 0)
+										.mega-sub
+											+pos(abs, 0 null null 100%)
+											width: 100%
+											height: 100%
+											border-left: 1px solid darken($white,10%)
+											display: none
+											ul
+												width: 100%
+												// border-right: none
+										&:hover
+											> a
+												color: $lblue
+											.mega-sub
+												display: block
+						&:hover
+							+media-breakpoint-up(xl)
+								a
+									&:after
+										display: block
+								.mega
+									+flexbox
+									flex-wrap: wrap
+
+			&:hover
+				+media-breakpoint-up(xl)
+					ul.menu-link
+						visibility: visible
+						+opacity(1)
+		.menu2
+			+media-breakpoint-down(lg)
+				padding: 15px 0
 		ul.menu-link
 			+flexbox
 			align-items: center
 			align-content: center
 			flex-wrap: wrap
-			li
+			> li
 				padding: 0px 20px
-				a
+				> a
 					+flexbox
 					align-items: center
 					align-content: center
 					+fs(14rem)
-					font-weight: 300
+					font-weight: 500
 					.icon
 						width: 32px
 						height: 32px
@@ -237,6 +383,19 @@ header
 						align-content: center
 						justify-content: center
 						margin-right: 15px
+						+media-breakpoint-down(lg)
+							width: 24px
+							height: 24px
+							margin-right: 10px
+							img
+								max-width: 100%
+								max-height: 100%
 					.text
 						line-height: 20px
 						padding: 15px 0
+						font-weight: 500
+						+media-breakpoint-down(lg)
+							padding: 10px 0
+				&:hover
+					> a
+						color: $lblue

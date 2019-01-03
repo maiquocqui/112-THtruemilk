@@ -1,139 +1,171 @@
 .product-item
-	height: 100%
-	+pos(rel,null)
-	+media-breakpoint-down(lg)
-		height: 100%
-	.btn_compare
-		// display: none
-		+pos(abs,0 null 0 0)
-		right: 0
-		+fs(0)
-		visibility: hidden
-		opacity: 0
-		z-index: 10
-		&:before
-			content: '\f00c'
-			display: block
-			width: 30px
-			height: 30px
-			line-height: 30px
-			text-align: center
-			border: 1px solid darken($white,10%)
-			+bor-rad(50px)
-			+fs(16rem)
-			margin-top: 10px
-			margin-left: 10px
-			color: darken($white,20%)
-		&.active
-			&:before
-				// border-color: color-rgba($white,0)
-				// background: linear-gradient(to right, $lpurple, $dpurple)
-				color: $white
-
-.product-col
 	display: block
-	height: 100%
-	padding: 10px
-	border: 1px solid transparent
-	+bor-rad(5px)
+	+pos(rel,null)
+	padding: 15px
 	+transition(all,0.5s)
-	+media-breakpoint-down(lg)
-		padding: 5px
 	+media-breakpoint-down(sm)
 		padding: 10px
-	figure
+	.img
+		height: 170px
+		+flexbox
+		align-items: center
+		align-content: center
+		justify-content: center
 		+pos(rel,null)
-		.product-img
-			display: block
-			+flexbox
-			margin: 0px -10px
-			height: 200px
-			justify-content: center
-			align-items: center
-			align-content: center
-			overflow: hidden
-			+media-breakpoint-down(lg)
-				margin: 0px -5px
-				height: 180px
+		+media-breakpoint-down(sm)
+			height: 100px
+		> img
+			max-width: 90%
+			max-height: 90%
+		.label
+			+pos(abs, 10px 0px null null)
+			z-index: 3
 			+media-breakpoint-down(sm)
-				margin: 0 -10px
-			picture
-				width: 100%
-				height: 100%
-				+flexbox
-				justify-content: center
-				align-items: center
-				align-content: center
-			img
-				max-width: 100%
-				max-height: 100%
-		figcaption
-			padding-top: 10px
-			.product-name
-				+fs(14rem)
-				line-height: 1.3
-				font-weight: 500
-				color: $black
-				display: -webkit-box
-				-webkit-line-clamp: 2
-				-webkit-box-orient: vertical
-				overflow: hidden
-				text-overflow: ellipsis
-				+transition(all,0.5s)
-				a
-					color: $black
-			.product-price
-				margin-top: 5px
-				+pos(rel,null)
-				.promotion
-					+pos(abs, 2px 0 null null)
-					+fs(11rem)
-					font-weight: 600
-					color: $white
-					padding: 0px 5px
-					+bor-rad(3px)
-					&.off
-						background: linear-gradient(to right, $orange, $deeporange)
-				.new
-					+fs(14rem)
-					line-height: 1
-					font-weight: 700
-					color: $red
-					+media-breakpoint-down(lg)
-						// +fs(12rem)
-				.old
-					+fs(10rem)
-					line-height: 1
-					color: darken($white,40%)
-					text-decoration: line-through
-			.product-rating
-				+flexbox
-				align-items: center
-				align-content: center
-				padding: 5px 0
-				flex-wrap: wrap
-				+media-breakpoint-down(lg)
-				.br-wrapper
-					margin-right: 5px
-				span
+				width: 30px
+	.name
+		+fs(14rem)
+		min-height: 66px
+		font-weight: 500
+		color: $main
+		margin-bottom: 5px
+		+media-breakpoint-down(sm)
+			+fs(13rem)
+			min-height: 55px
+		a
+			display: block
+			+textover(3)
+			min-width: 63px
+	.price
+		+fs(16rem)
+		font-weight: 500
+		color: $yellow
+		+media-breakpoint-down(sm)
+			+fs(14rem)
+	.btns
+		+flexbox
+		margin-top: 5px
+		opacity: 0
+		visibility: hidden
+		+transition(all,0.5s)
+	.select-amount
+		border: 2px solid darken($white,5%)
+		color: $main
+		padding: 0px 10px
+
+	.btn-buy
+		display: block
+		flex: 1
+		margin-left: 5px
+		+fs(14rem)
+		font-weight: 400
+		color: $white
+		text-transform: uppercase
+		text-align: center
+		background: $dblue
+		line-height: 36px
+		+transition(all,0.5s)
+		+media-breakpoint-down(sm)
+			+fs(12rem)
+		&:hover
+			background: $blue
+	&:hover
+		box-shadow: 1px 1px 5px color-rgba($black,0.15)
+		.btns
+			opacity: 1
+			visibility: visible
+.col-wide
+	flex: 0 0 100%
+	max-width: 100%
+	.product-item
+		+flexbox
+		flex-wrap: wrap
+		.img
+			width: 250px
+			height: 250px
+			+media-breakpoint-down(md)
+				width: 200px
+				height: 200px
+			+media-breakpoint-down(sm)
+				width: 80px
+				height: 80px
+		.caption
+			flex: 1
+			padding: 20px
+			+flexbox
+			+media-breakpoint-down(sm)
+				display: block
+				padding: 0
+				padding-left: 10px
+			.info
+				flex: 1
+			.name
+				+fs(17rem)
+				min-height: auto
+				margin-bottom: 10px
+				+media-breakpoint-down(sm)
+					+fs(13rem)
+			.des
+				+media-breakpoint-down(sm)
 					+fs(12rem)
-					color: darken($white,40%)
-			.product-des
-				+fs(12rem)
-				line-height: 1.4
-				white-space: normal
-				margin-top: 5px
-				color: $main
 				ul
 					list-style-type: disc
 					padding-left: 20px
 					li
-	&:hover
-		+media-breakpoint-up(xl)
-			border: 1px solid darken($white,10%)
-			// box-shadow: 0px 10px 20px -10px color-rgba($black,0.2)
-			figure
-				figcaption
-					.product-name
-						color: $blue
-			
+						color: darken($white,20%)
+						margin-bottom: 5px
+						span
+							color: $main
+			.price
+				+fs(20rem)
+				margin-bottom: 30px
+				+media-breakpoint-down(sm)
+					margin-bottom: 5px
+					+fs(14rem)
+					width: 100%
+			.btns
+				width: 140px
+				margin-top: 0
+				+flexbox
+				flex-direction: column
+				align-items: flex-end
+				justify-content: flex-start
+				visibility: visible
+				opacity: 1
+				+media-breakpoint-down(md)
+					width: 120px
+				+media-breakpoint-down(sm)
+					width: 100%
+					flex-direction: row
+					flex-wrap: wrap
+				.select-amount
+					padding: 5px 10px
+					+fs(16rem)
+					opacity: 0
+					visibility: hidden
+					+transition(all,0.5s)
+					+media-breakpoint-down(md)
+						visibility: visible
+						opacity: 1
+					+media-breakpoint-down(sm)
+						padding: 7px 10px
+						margin-right: 5px
+				.btn-buy
+					flex: unset
+					padding: 0px 20px
+					margin-top: 10px
+					display: block
+					width: 100%
+					margin-left: 0
+					opacity: 0
+					visibility: hidden
+					+media-breakpoint-down(md)
+						visibility: visible
+						opacity: 1
+					+media-breakpoint-down(sm)
+						width: auto
+		&:hover
+			.caption
+				.btns
+					.select-amount, .btn-buy
+						visibility: visible
+						opacity: 1

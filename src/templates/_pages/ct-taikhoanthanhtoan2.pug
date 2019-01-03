@@ -1,0 +1,73 @@
+.container
+	section.account-page-wrap
+		.account-sidebar
+			.welcome
+				label Xin chào
+				.name Nguyễn hoàng yến
+			.sidebar-link
+				ul
+					li
+						a(href="#!")
+							.icon
+								img(src="img/ica1.png", alt="")
+							span thông tin tài khoản
+					li
+						a(href="#!")
+							.icon
+								img(src="img/ica2.png", alt="")
+							span Quản lý đơn hàng 
+					li
+						a(href="#!")
+							.icon
+								img(src="img/ica3.png", alt="")
+							span Địa chỉ Giao hàng
+					li.active
+						a(href="#!")
+							.icon
+								img(src="img/ica4.png", alt="")
+							span hình thức thanh toán
+					li
+						a(href="#!")
+							.icon
+								img(src="img/ica5.png", alt="")
+							span đổi mật khẩu
+					li
+						a(href="#!")
+							.icon
+								img(src="img/ica6.png", alt="")
+							span Đăng xuất
+
+		.account-page
+			.home-title Cập nhật thông tin thẻ
+			.account-form.form-wrap
+				.row.mb-4
+					.form-group.col-12.col-md-6
+						label Tên trên thẻ
+						input(type="text" placeholder="Họ và tên")
+					.form-group.col-12.col-md-6
+						label Số thẻ
+						input(type="text" placeholder="098 xxx xxxx")
+					.form-group.col-12.col-md-6
+						label CSC
+						input(type="password" placeholder="XXX")
+					.form-group.col-12.col-md-6
+						label Ngày hết hạn
+						ul.birthday
+							li
+								select
+									option Tháng
+							li
+								select
+									option Năm
+					.form-group.col-12.col-md-6
+						label Loại thẻ
+						ul.card-type
+							li.checkbox
+								input#cb1(type="radio", name="cb")
+								label(for="cb1")
+									img(src="img/tmaster.png", alt="")
+							li.checkbox
+								input#cb2(type="radio", name="cb")
+								label(for="cb2")
+									img(src="img/tvisa.png", alt="")
+				input(type="submit", value="Cập nhật")
