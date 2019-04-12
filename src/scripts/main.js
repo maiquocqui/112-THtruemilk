@@ -21,6 +21,15 @@ $(document).ready(function() {
     $('.overlay').fadeOut(500);
   });
 
+  // header scroll event
+  $(window).bind('scroll', function() {
+    if ($(window).scrollTop() > 100) {
+      $('header').addClass('minimal');
+    } else {
+      $('header').removeClass('minimal');
+    }
+  });
+
   // banner
   $('.banner').slick({
     slidesToShow: 1,
